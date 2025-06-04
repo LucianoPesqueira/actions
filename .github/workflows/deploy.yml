@@ -16,5 +16,4 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        if: false
         run: echo "Hola Mundo ${{ github.ref }}"
