@@ -6,9 +6,12 @@ jobs:
   first-jobs:
     runs-on: ubuntu-latest
 
+    env:
+      NAME: "CodigoFacilito"
+
     steps:
       - name: Hola Mundo
-        run: echo "Hola Mundo"
+        run: echo "Hola Mundo $CodigoFacilito"
   
   second-jobs:
     needs: first-jobs
