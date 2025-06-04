@@ -4,6 +4,7 @@ on: push
 
 jobs:
   first-jobs:
+    name: Tutorial de Github Actions
     runs-on: ubuntu-latest
 
     env:
