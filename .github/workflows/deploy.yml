@@ -7,8 +7,8 @@ jobs:
     name: Tutorial de Github Actions
     runs-on: ubuntu-latest
 
-    env:
-      NAME: "CodigoFacilito"
+    outputs:
+      salida: ${{ steps.step_1.outputs.my_variable }}
 
     steps:
       - name: Working dir
@@ -22,6 +22,9 @@ jobs:
     needs: first-jobs
     runs-on: ubuntu-latest
 
+    env:
+      SALIDA: ${{ needs.first-jobs.outputs.salida }}
+
     steps:
       - name: Hola Mundo
-        run: echo "Hola Mundo ${{ github.ref }}"
+        run: echo "$SALIDA"
